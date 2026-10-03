@@ -1,0 +1,322 @@
+:root {
+  --primary-color: #168aca;
+  --hero-ink: #070a12;
+  --hero-white: #f8f8fb;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100%;
+  min-height: 100%;
+  margin: 0;
+}
+
+body {
+  background: #070a12;
+  color: #f8f8fb;
+  font-family: "Funnel Sans", sans-serif;
+}
+
+.hero {
+  position: relative;
+  display: flex;
+  min-height: 100vh;
+  min-height: 100svh;
+  overflow: hidden;
+  isolation: isolate;
+  align-items: flex-end;
+  padding: 0 80px 80px;
+  background: radial-gradient(ellipse at 76% 8%, rgba(56, 93, 163, 0.58), transparent 38%), linear-gradient(180deg, #101522 0%, #090d17 61%, #030509 100%);
+}
+.hero__video {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -3;
+  -o-object-fit: cover;
+     object-fit: cover;
+  opacity: 0.2;
+}
+.hero__content {
+  position: relative;
+  z-index: 1;
+  width: min(100%, 1250px);
+}
+.hero__title {
+  max-width: 1100px;
+  margin: 0 0 26px;
+  color: #f8f8fb;
+  font-family: "Source Serif 4", Georgia, serif;
+  font-size: 78px;
+  font-weight: 400;
+  line-height: 1.2;
+}
+.hero__title-break {
+  display: block;
+}
+.hero__description {
+  margin: 0 0 32px;
+  color: rgba(248, 248, 251, 0.9);
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.5;
+}
+.hero__cta {
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+  padding: 16px 32px;
+  background-color: #168aca;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: background-color 160ms ease;
+}
+.hero__cta:hover {
+  background-color: color-mix(in srgb, #168aca, #000 15%);
+}
+.hero__cta-text {
+  display: inline-block;
+}
+.hero__cta-icon {
+  display: inline-block;
+  transition: transform 160ms ease;
+}
+.hero__cta:hover .hero__cta-icon {
+  transform: translateX(4px);
+}
+.hero__desktop-break {
+  display: block;
+}
+@media (min-width: 1800px) {
+  .hero__title {
+    font-size: 84px;
+  }
+}
+@media (max-width: 1200px) {
+  .hero {
+    padding-bottom: 76px;
+  }
+  .hero__title {
+    max-width: 900px;
+    font-size: 64px;
+  }
+}
+@media (max-width: 800px) {
+  .hero {
+    padding: 0 6.5% 64px;
+  }
+  .hero__title {
+    max-width: 720px;
+    margin-bottom: 22px;
+    font-size: 52px;
+    line-height: 1.16;
+  }
+  .hero__description {
+    max-width: 620px;
+    margin-bottom: 27px;
+  }
+  .hero__desktop-break {
+    display: none;
+  }
+}
+@media (max-width: 600px) {
+  .hero {
+    min-height: 100svh;
+    padding: 0 24px 48px;
+  }
+  .hero__title {
+    margin-bottom: 18px;
+    font-size: 39px;
+    line-height: 1.13;
+  }
+  .hero__description {
+    max-width: 390px;
+    margin-bottom: 24px;
+    font-size: 15px;
+  }
+  .hero__cta {
+    min-width: 216px;
+    min-height: 49px;
+    padding: 0 21px;
+    font-size: 17px;
+  }
+}
+@media (max-width: 360px) {
+  .hero {
+    padding-top: 80px;
+    padding-right: 20px;
+    padding-left: 20px;
+    padding-bottom: 38px;
+    align-items: center;
+  }
+  .hero__title {
+    font-size: 33px;
+  }
+  .hero__description {
+    font-size: 14px;
+  }
+}
+
+.results {
+  background-color: #f8f8fb;
+  color: #070a12;
+}
+.results__header__title {
+  margin: 0 0 32px;
+  text-transform: uppercase;
+  font-weight: 500;
+  font-family: "Source Serif 4", Georgia, serif;
+  font-size: 42px;
+}
+.results__arrow {
+  width: 42px;
+  height: 42px;
+  border: none !important;
+  font-size: 25px;
+  line-height: 1;
+}
+.results__arrow:hover, .results__arrow:focus-visible {
+  background: rgba(57, 73, 220, 0.507) !important;
+  color: var(--hero-white) !important;
+}
+.results__track {
+  scrollbar-width: none;
+  scroll-behavior: smooth;
+}
+.results__track::-webkit-scrollbar {
+  display: none;
+}
+
+.logo__card {
+  flex: 0 0 calc((100% - 32px) / 3.5);
+  min-height: 480px;
+  border-radius: 8px;
+  scroll-snap-align: start;
+  color: var(--hero-white);
+}
+.logo__card__image {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.logo__card__shade {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0.85));
+}
+.logo__card__title {
+  font-size: 22px;
+  line-height: 1.35;
+}
+.logo__card__content {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 20px;
+  z-index: 1;
+}
+.logo__card__quote {
+  font-size: 12px;
+  line-height: 1.6;
+}
+.logo__card__author {
+  font-size: 14px;
+  line-height: 1.4;
+}
+.logo__card__author small {
+  font-size: 12px;
+  opacity: 0.8;
+}
+.logo__card__author a {
+  color: #f8f8fb;
+  border-radius: 5px;
+  background: #168aca;
+}
+.logo__card__author a i {
+  padding: 10px;
+  font-size: 20px;
+  transform: rotate(316deg);
+}
+
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .logo__card {
+    flex: 0 0 calc((100% - 16px) / 2.2);
+  }
+}
+/* =========================
+   Mobile
+   Below 768px
+   1.5 Cards
+========================= */
+@media (max-width: 767.98px) {
+  .logo__card {
+    flex: 0 0 calc((100% - 16px) / 1.2);
+    min-height: 430px;
+  }
+  .results__header__title {
+    font-size: 32px;
+  }
+}
+.cards {
+  padding: 80px 20px;
+  background: #f5f5f5;
+}
+.cards__container {
+  width: min(100%, 1200px);
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+.card {
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+  border-radius: 4px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.3s ease-in-out;
+}
+.card__image {
+  width: 100%;
+  height: 250px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.card__content {
+  padding: 10px;
+  margin-bottom: 20px;
+}
+.card__title {
+  color: #000;
+  margin: 0 0 10px;
+}
+.card__description {
+  color: #666;
+  margin: 0 0 10px;
+  padding-bottom: 16px;
+}
+.card__btn {
+  color: #fff;
+  background-color: #168aca;
+  border: 1px solid #168aca;
+  padding: 10px 20px;
+  border-radius: 4px;
+  text-decoration: none;
+}
+.card__btn:hover {
+  background-color: color-mix(in srgb, #168aca, #000 15%);
+}/*# sourceMappingURL=style.css.map */

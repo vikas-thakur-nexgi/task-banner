@@ -476,4 +476,14 @@ body {
   border-radius: 8px 0px;
   border-top: 7px solid #666;
   border-left: 7px solid #666;
+}
+@media (max-width: 768px) {
+  .nexgi__expertise__card__card {
+    grid-template-columns: repeat(1, 1fr) !important;
+  }
+}
+@media (max-width: 768px) {
+  .nexgi__expertise__cards {
+    grid-template-columns: repeat(1, 1fr);
+  }
 }/*# sourceMappingURL=style.css.map */

@@ -581,7 +581,8 @@ $btn-hover-bg: #0056b3;
         gap: 20px;
 
     }
-     &__tabs {
+
+    &__tabs {
         margin: 0 0 32px;
     }
 
@@ -630,9 +631,6 @@ $btn-hover-bg: #0056b3;
 
         }
 
-       
-
-
         &__description {
             font-size: 14px;
             line-height: 1.4;
@@ -667,6 +665,18 @@ $btn-hover-bg: #0056b3;
             }
         }
 
+        @media (max-width: 768px) {
+            &__card {
+                grid-template-columns: repeat(1, 1fr) !important;
+            }
+        }
+
+    }
+
+    @media (max-width: 768px) {
+        &__cards {
+            grid-template-columns: repeat(1, 1fr);
+        }
     }
 
 }

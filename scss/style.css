@@ -167,25 +167,39 @@ body {
 
 .results {
   background-color: #f8f8fb;
-  color: #070a12;
 }
 .results__header__title {
-  margin: 0 0 32px;
+  color: #070a12;
+  margin: 0;
   text-transform: uppercase;
-  font-weight: 500;
-  font-family: "Source Serif 4", Georgia, serif;
+  font-family: "Funnel Sans", sans-serif;
   font-size: 42px;
+  line-height: 1.2;
 }
 .results__arrow {
   width: 42px;
   height: 42px;
+  padding: 0;
   border: none !important;
-  font-size: 25px;
+  background: transparent !important;
+  color: #070a12 !important;
+  font-size: 20px;
   line-height: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.results__arrow i {
+  color: inherit;
 }
 .results__arrow:hover, .results__arrow:focus-visible {
   background: rgba(57, 73, 220, 0.507) !important;
-  color: var(--hero-white) !important;
+  color: #f8f8fb !important;
+}
+.results__arrow:disabled {
+  opacity: 0.4;
+  color: #070a12 !important;
+  background: transparent !important;
 }
 .results__track {
   scrollbar-width: none;
@@ -255,11 +269,6 @@ body {
     flex: 0 0 calc((100% - 16px) / 2.2);
   }
 }
-/* =========================
-   Mobile
-   Below 768px
-   1.5 Cards
-========================= */
 @media (max-width: 767.98px) {
   .logo__card {
     flex: 0 0 calc((100% - 16px) / 1.2);
@@ -319,4 +328,152 @@ body {
 }
 .card__btn:hover {
   background-color: color-mix(in srgb, #168aca, #000 15%);
+}
+
+.bg-conter {
+  background-color: #eeeeee;
+}
+
+.counter__smalltext {
+  font-size: 14px;
+  line-height: 1.5;
+  text-transform: capitalize;
+  color: #1e87dd;
+  display: inline-block;
+  padding: 8px 20px;
+  border-radius: 4px;
+  background-color: rgba(0, 229, 255, 0.212);
+}
+.counter__title {
+  font-size: 42px;
+  line-height: 1.2;
+  font-family: "Source Serif 4", Georgia, serif;
+  color: #070a12;
+}
+.counter__cards {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+.counter__card {
+  width: 100%;
+  height: 100%;
+  background-color: #f8f8fb;
+  border-radius: 16px;
+  border: 1px solid #eee;
+  overflow: hidden;
+  transition: transform 0.3s ease-in-out;
+  padding: 30px 20px;
+}
+.counter__card__number {
+  font-size: 52px;
+  line-height: 1.5;
+  font-weight: 500;
+  color: #070a12;
+}
+.counter__card__content {
+  font-size: 18px;
+  line-height: 1.5;
+  color: #666;
+  font-weight: 500;
+}
+.counter__card__content span {
+  color: #168aca;
+}
+@media (max-width: 1024px) {
+  .counter__cards {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media (max-width: 768px) {
+  .counter__cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 544px) {
+  .counter__cards {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+.nexgi__expertise__title {
+  font-size: 42px;
+  line-height: 1.2;
+  font-family: "Funnel Sans", sans-serif;
+  color: #f8f8fb;
+}
+.nexgi__expertise__cards {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+.nexgi__expertise__tabs {
+  margin: 0 0 32px;
+}
+.nexgi__expertise__list {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+.nexgi__expertise__tab__item {
+  font-size: 20px;
+}
+.nexgi__expertise__card {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+  border-radius: 8px;
+  background-color: #131b2e;
+  padding: 30px 0px 0px 25px;
+  overflow: hidden;
+}
+.nexgi__expertise__card__subtitle {
+  font-size: 14px;
+  display: inline-block;
+  color: #f8f8fb;
+  line-height: 1.4;
+  font-weight: 500;
+  background-color: #168aca;
+  padding: 8px 16px;
+  border-radius: 4px;
+}
+.nexgi__expertise__card__title {
+  font-size: 34px;
+  color: #f8f8fb;
+  line-height: 1.2;
+  font-weight: 500;
+  text-transform: capitalize;
+  font-family: "Funnel Sans", sans-serif;
+}
+.nexgi__expertise__card__description {
+  font-size: 14px;
+  line-height: 1.4;
+  color: #f8f8fb;
+}
+.nexgi__expertise__card__btn {
+  display: inline-block;
+  color: #f8f8fb !important;
+  border-radius: 4px;
+  color: #070a12;
+  font-size: 16px;
+  line-height: 1.4;
+  font-weight: 500;
+  align-items: center;
+  text-decoration: none;
+  text-transform: capitalize;
+}
+.nexgi__expertise__card__btn i {
+  margin-left: 8px;
+}
+.nexgi__expertise__card__image img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 8px 0px;
+  border-top: 7px solid #666;
+  border-left: 7px solid #666;
 }/*# sourceMappingURL=style.css.map */

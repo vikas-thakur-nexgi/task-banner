@@ -1,0 +1,222 @@
+// ==========================
+// Variables
+// ==========================
+
+$primary-color: #2563eb;
+$dark-color: #111827;
+$text-color: #6b7280;
+$light-color: #f8fafc;
+$white: #ffffff;
+$border-color: #e5e7eb;
+
+$radius: 16px;
+
+
+// ==========================
+// Reset
+// ==========================
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: $light-color;
+    color: $dark-color;
+}
+
+
+// ==========================
+// Profile Section
+// ==========================
+
+.profile-section {
+
+    padding: 80px 20px;
+
+    &__container {
+        max-width: 1200px;
+        margin: 0 auto;
+
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 30px;
+    }
+}
+
+
+// ==========================
+// Profile Card
+// ==========================
+
+.profile-card {
+
+    background: $white;
+    border: 1px solid $border-color;
+    border-radius: $radius;
+    overflow: hidden;
+
+    transition: 0.3s ease;
+
+    // &:hover {
+    //     transform: translateY(-8px);
+    //     box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+    // }
+
+
+    // Card Image
+    &__image {
+
+        width: 100%;
+        height: 250px;
+
+        overflow: hidden;
+
+        img {
+            width: 100%;
+            height: 100%;
+
+            object-fit: cover;
+
+            display: block;
+
+            transition: 0.3s ease;
+        }
+    }
+
+
+    // Card Content
+    &__content {
+        padding: 25px;
+
+        
+    }
+
+
+    // Role
+    &__role {
+
+        display: inline-block;
+
+        margin-bottom: 10px;
+
+        font-size: 13px;
+        font-weight: 600;
+
+        color: $primary-color;
+        text-transform: uppercase;
+    }
+
+
+    // Name
+    &__name {
+
+        margin-bottom: 12px;
+
+        font-size: 24px;
+        line-height: 1.2;
+    }
+
+
+    // Description
+    &__description {
+
+        margin-bottom: 20px;
+
+        color: $text-color;
+
+        font-size: 15px;
+        line-height: 1.6;
+    }
+
+
+    // Skills
+    &__skills {
+
+        display: flex;
+        flex-wrap: wrap;
+
+        gap: 8px;
+
+        margin-bottom: 25px;
+    }
+
+
+    // Skill
+    &__skill {
+
+        padding: 6px 10px;
+
+        background: #eff6ff;
+        color: $primary-color;
+
+        border-radius: 6px;
+
+        font-size: 12px;
+        font-weight: 600;
+    }
+
+
+    // Button
+    &__button {
+
+        display: block;
+
+        padding: 12px 20px;
+
+        background: $primary-color;
+        color: $white;
+
+        border-radius: 8px;
+
+        text-align: center;
+        text-decoration: none;
+
+        font-size: 14px;
+        font-weight: 600;
+
+        transition: 0.3s ease;
+
+        &:hover {
+            background: #1d4ed8;
+        }
+    }
+}
+
+
+// ==========================
+// Responsive
+// ==========================
+
+@media (max-width: 992px) {
+
+    .profile-section {
+
+        &__container {
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+}
+
+
+@media (max-width: 576px) {
+
+    .profile-section {
+
+        padding: 50px 15px;
+
+        &__container {
+            grid-template-columns: 1fr;
+        }
+    }
+
+    .profile-card {
+
+        &__image {
+            height: 220px;
+        }
+    }
+}

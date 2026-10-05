@@ -474,7 +474,7 @@ body {
   -o-object-fit: cover;
      object-fit: cover;
   border-radius: 8px 0px;
-  border-top: 7px solid #666;
+  border-top: 7px solid #667;
   border-left: 7px solid #666;
 }
 @media (max-width: 768px) {

@@ -65,3 +65,75 @@ document.querySelectorAll(".results").forEach((section) => {
     updateArrows();
 
 });
+
+// Swiper JS Init
+document.addEventListener("DOMContentLoaded", function () {
+
+    // Tabs Slider
+    const tabsSwiper = new Swiper(".nexgiExpertiseTabs", {
+        slidesPerView: "auto",
+        spaceBetween: 15,
+        freeMode: true,
+        grabCursor: true,
+
+        breakpoints: {
+            320: {
+                spaceBetween: 10
+            },
+            768: {
+                spaceBetween: 15
+            }
+        }
+    });
+
+
+    // Cards Slider
+    const expertiseSwiper = new Swiper(".nexgiExpertiseSlider", {
+
+        slidesPerView: 1,
+        spaceBetween: 30,
+
+        navigation: {
+            nextEl: ".nexgi__expertise__next",
+            prevEl: ".nexgi__expertise__prev"
+        },
+
+        pagination: {
+            el: ".nexgiExpertiseSlider .swiper-pagination",
+            clickable: true
+        },
+
+        grabCursor: true,
+
+        breakpoints: {
+            768: {
+                slidesPerView: 1
+            }
+        }
+    });
+
+
+    // Tab click
+    document.querySelectorAll(
+        ".nexgi__expertise__tab__item"
+    ).forEach(function (tab) {
+
+        tab.addEventListener("click", function () {
+
+            document.querySelectorAll(
+                ".nexgi__expertise__tab__item"
+            ).forEach(function (item) {
+                item.classList.remove("active");
+            });
+
+            this.classList.add("active");
+
+            const tabName = this.getAttribute("data-tab");
+
+            console.log("Selected:", tabName);
+
+        });
+
+    });
+
+});

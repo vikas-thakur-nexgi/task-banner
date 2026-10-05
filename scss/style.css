@@ -418,6 +418,17 @@ body {
   margin: 0;
   list-style: none;
 }
+@media (max-width: 768px) {
+  .nexgi__expertise__list {
+    overflow-x: auto;
+    flex-wrap: nowrap;
+    white-space: nowrap;
+    padding-bottom: 10px;
+  }
+  .nexgi__expertise__list::-webkit-scrollbar {
+    display: none;
+  }
+}
 .nexgi__expertise__tab__item {
   font-size: 20px;
 }
@@ -478,8 +489,12 @@ body {
   border-left: 7px solid #666;
 }
 @media (max-width: 768px) {
-  .nexgi__expertise__card__card {
-    grid-template-columns: repeat(1, 1fr) !important;
+  .nexgi__expertise__card {
+    grid-template-columns: 1fr;
+    padding: 20px;
+  }
+  .nexgi__expertise__card__image {
+    order: -1;
   }
 }
 @media (max-width: 768px) {
